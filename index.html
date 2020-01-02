@@ -56,44 +56,85 @@
 </div>
 
   <!-- Page Content -->
-  <div class="animated fadeInDown slow container white p-5">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h1 class="mt-5">We build websites, apps and games!</h1>
+
+    <div class="white full container-fluid">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1 class="vertical animated fadeInDown slow delay-1s">We build websites apps and games</h1>
+        </div>
       </div>
     </div>
+
+ <!-- Another Section -->
+  <div class="container-fluid">
+    <div>
+      <svg width="100%" height="350">
+        <g class="scroll-animations">
+        <g class="animated animate1">
+      <polygon points="0,0 1000,350 0,350" fill="#248EA6" opacity="70%"/>
+      <text x="50" y="230" font-size="40" 
+            fill="white" stroke="black" stroke-width="2">
+            Building applications
+      </text> 
+      <text x="50" y="270" font-size="40"
+            fill="white" stroke="black" stroke-width="2">
+            Professionally
+      </text>
+    </g>
+    </g>
+    <g class="scroll-animations">
+    <g class="animated animate2">
+      <polygon points="1500,0, 1450,525.3 0,0" fill="#3DC9D9" opacity="70%"/>
+      <text x="900" y="130" font-size="40" 
+            fill="white" stroke="black" stroke-width="2">
+            Ambitious developers
+      </text> 
+      <text x="900" y="170" font-size="40"
+            fill="white" stroke="black" stroke-width="2">
+             And creative designers
+      </text>
+    </g>
+    </g>
+    </svg>
   </div>
- 
-  <div>
-    <svg width="100%" height="350">
-      <g class="animated fadeInUp">
-    <polygon points="0,0 1000,350 0,350" fill="#248EA6" opacity="70%"/>
-    <text x="50" y="230" font-size="40" 
-          fill="white" stroke="black" stroke-width="2">
-          Building applications
-    </text> 
-    <text x="50" y="270" font-size="40"
-          fill="white" stroke="black" stroke-width="2">
-          Professionally
-    </text>
-  </g>
-  <g class="animated fadeInDown">
-    <polygon points="1500,0, 1450,525.3 0,0" fill="#3DC9D9" opacity="70%"/>
-    <text x="900" y="130" font-size="40" 
-          fill="white" stroke="black" stroke-width="2">
-          Ambitious developers
-    </text> 
-    <text x="900" y="170" font-size="40"
-          fill="white" stroke="black" stroke-width="2">
-           And creative designers
-    </text>
-  </g>
-  </svg>
-</div>
+  </div>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.slim.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+  // Scroll function courtesy of Scott Dowding; http://stackoverflow.com/questions/487073/check-if-element-is-visible-after-scrolling
+
+$(document).ready(function() {
+  // Check if element is scrolled into view
+  function isScrolledIntoView(elem) {
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+  }
+  // If element is scrolled into view, fade it in
+  $(window).scroll(function() {
+    $('.scroll-animations .animate1').each(function() {
+      if (isScrolledIntoView(this) === true) {
+        $(this).addClass('fadeInUp');
+      }
+    });
+  });
+
+  // If element is scrolled into view, fade it in
+  $(window).scroll(function() {
+    $('.scroll-animations .animate2').each(function() {
+      if (isScrolledIntoView(this) === true) {
+        $(this).addClass('fadeInDown');
+      }
+    });
+  });
+});
+  </script>
 
 </body>
 

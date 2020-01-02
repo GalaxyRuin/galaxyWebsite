@@ -20,4 +20,15 @@ body {
   font-family: 'Plaster', cursive;
 }
 
+.full { 
+  height: 100vh;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 90px; 
+}
+
+.vertical{
+  margin-top:20%;
+  }
+
 /* The next section of the CSS will be for the Layout */

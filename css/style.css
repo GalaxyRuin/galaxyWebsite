@@ -1,0 +1,23 @@
+html *
+{
+  font-family: 'Nova Square', cursive;
+}
+
+body {
+    /* background: url(../img/galaxy.jpg) no-repeat center center fixed;  */
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/galaxy.jpg)  no-repeat center center fixed;;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+.white {
+  color: #FAFAFA;
+}
+
+.logo {
+  font-family: 'Plaster', cursive;
+}
+
+/* The next section of the CSS will be for the Layout */
